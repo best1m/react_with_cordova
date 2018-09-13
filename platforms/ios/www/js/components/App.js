@@ -1,23 +1,41 @@
 import React, {Component} from 'react';
+import bluetoothle from '../../../plugins/cordova-plugin-bluetoothle/www/bluetoothle'
 
 class App extends Component {
     state = {
-        test : null
+        test : 2132131
     }
-    test = () => {
+    callTest = () => {
         this.setState({
-            test : '21312321'
+            test : 2342342323
         })
+        bluetoothle.initialize(
+            res => {
+                console.log(res);
+                alert(res);
+            },
+        );
+        // bluetoothle.startScan(
+        //     res => {
+        //         console.log(res);
+        //     },
+        //     err => {
+        //         console.log(err);
+        //     }
+        // );
+        
     }
+
     render(){
         return(
         <div>
             <h1>pdlc controller</h1>
-            <button onclick={this.test}>TYPE1</button>
+            <button onClick={this.callTest}>TYPE1</button>
             <button>TYPE2</button>
             <button>TYPE3</button>
             <button>TYPE4</button>
-            {this.state.test}
+            <div>{this.state.test}</div>
+
         </div>
         )
     }

@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.kth.pdlcController"
+    },
+    "cordova-plugin-bluetoothle": {
+      "PACKAGE_NAME": "com.kth.pdlcController"
     }
   },
   "dependent_plugins": {}

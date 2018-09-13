@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import bluetoothle from '../../../plugins/cordova-plugin-bluetoothle/www/bluetoothle'
 
 class App extends Component {
     state = {
@@ -8,6 +9,21 @@ class App extends Component {
         this.setState({
             test : 2342342323
         })
+        bluetoothle.initialize(
+            res => {
+                console.log(res);
+                alert(res);
+            },
+        );
+        // bluetoothle.startScan(
+        //     res => {
+        //         console.log(res);
+        //     },
+        //     err => {
+        //         console.log(err);
+        //     }
+        // );
+        
     }
 
     render(){
@@ -19,7 +35,7 @@ class App extends Component {
             <button>TYPE3</button>
             <button>TYPE4</button>
             <div>{this.state.test}</div>
-            
+
         </div>
         )
     }
