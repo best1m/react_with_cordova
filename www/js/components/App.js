@@ -19,6 +19,7 @@ class App extends Component {
             <button>TYPE3</button>
             <button>TYPE4</button>
             <div>{this.state.test}</div>
+            
         </div>
         )
     }
