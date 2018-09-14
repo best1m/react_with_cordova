@@ -17,7 +17,6 @@ class App extends Component {
             <button onClick={this.callTest}>TYPE1</button>
             <button>TYPE2</button>
             <button>TYPE3</button>
-            <button>TYPE4</button>
             <div>{this.state.test}</div>
         </div>
         )
